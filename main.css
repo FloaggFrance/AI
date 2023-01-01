@@ -1,0 +1,262 @@
+@import url(https://raw.githack.com/FloaggFrance/LiveReaload-CSS-Minimum-Codes/main/min.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+}
+
+a.button {
+	display: inline-block;
+
+	text-decoration: none;
+	color: inherit;
+	border: solid 1px rgba(0, 0, 0);
+	padding: 8px 16px;
+	border-radius: 100px;
+}
+
+a.button:hover {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 1.0);
+}
+
+a.button.flex {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+}
+
+a.button .c-ico {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	margin-right: 8px;
+}
+
+a.button ion-icon {
+	font-size: 1.2rem;
+
+	width: 30px;
+}
+
+a.button .ico {
+	display: block;
+
+	width: 20px;
+	height: 2px;
+
+	margin-top: 5px;
+
+	background-color: rgba(0, 0, 0);
+	transition: .2s;
+}
+a.button.open .ico:nth-child(1) {
+	transform: rotate(46deg) translateY(6px);
+	transition: .2s;
+}
+a.button.open .ico {
+	transform: rotate(-46deg) translateY(-5px);
+	transition: .2s;
+}
+a.button .ico:nth-child(1) {
+	margin-top: 0;
+}
+
+a.button.open {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 1.0);
+}
+a.button.open .ico, a.button:hover .ico {
+	background-color: #fff;
+}
+
+nav .title-website {
+	display: block;
+
+	font-size: 1.8rem;
+}
+
+nav ul li {
+	margin-left: 16px;
+}
+
+nav ul li:nth-child(1) {
+	margin-left: 0;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+nav {
+	background-color: transparent;
+	border-bottom: solid 1px rgba(0, 0, 0);
+
+	height: 80px;
+
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+section.menu {
+	display: none;
+	background-color: transparent;
+	border-bottom: solid 1px rgba(0, 0, 0);
+
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+	overflow: auto;
+}
+
+.content-menu {
+	display: flex;
+	flex-direction: row;
+}
+
+.content-menu ul {
+	list-style: none;
+	display: flex;
+
+	flex-direction: column;
+	align-items: flex-start;
+
+	margin-left: 24px;
+	min-width: 300px;
+}
+
+.content-menu ul:nth-child(1) {
+	margin-left: 0;
+}
+
+.content-menu ul span.title-menu {
+	display: block;
+	font-size: 1.5rem;
+	padding: 8px 0;
+}
+
+.content-menu ul li {
+
+	display: block;
+
+	margin-top: 4px;
+}
+
+.content-menu ul li:nth-child(1) {
+	margin-top: 0px;
+}
+
+.content-menu ul a.link-a {
+	text-decoration: none;
+	display: block;
+
+	color: rgba(0, 0, 0, 1.0);
+
+	padding: 8px 0px;
+}
+
+.content-menu ul a.link-a::before {
+	content: "x ";
+	color: transparent;
+}
+
+.content-menu ul li a.link-a:hover {
+	font-weight: 800;
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.content-menu ul a.link-a:hover::before {
+	content: "x ";
+	color: inherit;
+}
+
+.banner-first-view {
+	height: 300px;
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-bottom: solid 1px rgba(0, 0, 0);
+}
+
+.home-second-view {
+	display: flex;
+	flex-direction: column-reverse;
+
+	padding-left: 16px;
+
+	border-bottom: solid 1px rgba(0, 0, 0);
+	border-left: solid 1px rgba(0, 0, 0);
+}
+
+.home-second-view .right img {
+	display: block;
+
+	width: 100%;
+}
+
+.home-second-view p {
+	margin-bottom: 16px;
+	line-height: 1.5rem;
+}
+
+.home-second-view .button-sub-section {
+	margin-top: 24px;
+	display: block;
+}
+
+@media (max-width: 800px) {
+	.opt-menu {
+		display: none;
+	}
+
+	.content-mg {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.opt-menu {
+		display: block;
+	}
+	.content-mg {
+		margin-left: 75px;
+		margin-right: 75px;
+	}
+
+	.banner-first-view {
+		height: 450px;
+	}
+
+	.home-second-view {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+	}
+
+	.home-second-view .left {
+		margin-right: 24px;
+	}
+
+	.home-second-view .right img {
+		width: 400px;
+	}
+}
+
+@media (min-width: 1900px) {
+	.content-mg {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+}
